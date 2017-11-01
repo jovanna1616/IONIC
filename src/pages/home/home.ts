@@ -21,7 +21,9 @@ export class HomePage {
 
 		this.selectedItem = navParams.get('item');
 
-		this.items = todoService.getAll();
+		todoService.getAll().then((todos) => {
+      this.items = todos;
+    });
 	}
 
   public showTodoDetails (todo) {

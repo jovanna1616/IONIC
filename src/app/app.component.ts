@@ -6,6 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AddTodoPage } from '../pages/add-todo/add-todo';
 import { Network } from '@ionic-native/network';
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
