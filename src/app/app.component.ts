@@ -24,7 +24,6 @@ export class MyApp {
     this.pages = [
       { title: 'HomePage', component: HomePage },
       { title: 'TodoPage', component: AddTodoPage },
-      { title: 'TodoItemPage', component: TodoItemPage }
     ];
 
   }
