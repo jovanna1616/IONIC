@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { AddTodoPage } from '../pages/add-todo/add-todo';
+import { TodoItemPage } from '../pages/todo-item/todo-item';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,6 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'HomePage', component: HomePage },
       { title: 'TodoPage', component: AddTodoPage }
+      { title: 'TodoItemPage', component: TodoItemPage }
     ];
 
   }

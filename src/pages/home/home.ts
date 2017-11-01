@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { TodoService } from '../../shared/todo.service';
+import { TodoItemPage } from '../todo-item/todo-item';
 
 @Component({
   selector: 'page-home',
@@ -14,12 +15,20 @@ export class HomePage {
   constructor (
   	public navCtrl: NavController, 
   	public navParams: NavParams,
+    public modalCtrl: ModalController,
   	public todoService: TodoService
   	) {
 
 		this.selectedItem = navParams.get('item');
 
-		this.items = todoService.getAll();		
+		this.items = todoService.getAll();
 	}
+
+  public showTodoDetails (todo) {
+    this.modalCtrl.create(
+      TodoItemPage,
+      { todo }
+    ).present();
+  }
 
 }

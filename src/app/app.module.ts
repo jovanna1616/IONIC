@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddTodoPage } from '../pages/add-todo/add-todo';
+import { TodoItemPage } from '../pages/todo-item/todo-item';
 
 import { TodoService } from '../shared/todo.service';
 
@@ -17,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     AddTodoPage,
+    TodoItemPage,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    AddTodoPage
+    AddTodoPage,
+    TodoItemPage,
   ],
   providers: [
     StatusBar,

@@ -9,10 +9,10 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items">
+    <button ion-item *ngFor="let item of items" (click)="showTodoDetails(item)">
       {{ item.title }}
       <div item-end>
-        {{ item.date }} - {{ item.time }}
+        {{ item.date }}
       </div>
     </button>
   </ion-list>
